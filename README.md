@@ -1,4 +1,3 @@
-# keikouto2001.github.io
-keikouto2001's Homepage
+# keikouto2001's Homepage
 
 Coming soon!

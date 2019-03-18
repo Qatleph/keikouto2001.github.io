@@ -1,0 +1,149 @@
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: 'Titillium Web', 'Noto Sans JP', sans-serif;
+    background-color: rgb(48, 46, 46);
+    padding: 5% 10%;
+}
+
+p, li
+{
+    font-size: 2.0rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+}
+
+h1
+{
+    font-size: 3.2rem;
+    color: white;
+    word-wrap: break-word;
+}
+
+h2
+{
+    font-size: 2.6rem;
+}
+
+h3
+{
+    font-size: 2.4rem;
+}
+
+/*
+    ####################
+    #  Tab propiertes  #
+    ####################
+*/
+
+.tab ul
+{
+    margin: 0%;
+}
+
+#tab-content
+{
+    background-color: white;
+    padding: 2%;
+}
+
+#tab-menu
+{
+    background-color: gray;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#tab-menu li
+{
+    display: block;
+    background-color: white;
+    border: rgb(255, 255, 255) 1px solid;
+    font-weight: bold;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    float: left;
+}
+
+#tab-menu a
+{
+    display: block;
+    padding: 10px;
+}
+
+.page
+{
+    margin: 2% 5%;
+    padding: 2%;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited
+{
+    color: black;
+}
+
+img
+{
+    border-radius: 10%;
+}
+
+#bio
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#bio p
+{
+    margin: 0% 2.5%;
+    padding: 0% 2.5%;
+    max-width: 79%;
+    width: 75%;
+    border-left: 2px rgb(51, 51, 51) dotted;
+}
+
+#bio img
+{
+    margin-top: 1.25%;
+    width: 20%;
+    min-width: 82px;
+}
+
+#links .link-content
+{
+    display: flex;
+    align-items: flex-start;
+}
+
+#links p
+{
+    margin: 5% 0%;
+    width: 80%;
+    vertical-align: middle;
+}
+
+#links a
+{
+    margin: 5% 5% 5% 2%;
+    display: block;
+    width: 10%;
+    min-width: 64px;
+}
+
+#links img
+{
+    width: 100%;
+}

@@ -1,13 +1,24 @@
 html
 {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 10px */
 }
 
 body
 {
     font-family: 'Titillium Web', 'Noto Sans JP', sans-serif;
-    background-color: rgb(48, 46, 46);
+    background: url(../img/background-image-pattern.png), rgb(45, 45, 45);
+    background-size: 25% auto;
     padding: 5% 10%;
+    animation: back-anime 7s infinite;
+}
+
+@keyframes back-anime
+{
+    0% { background-color: rgb(45, 45, 45); }
+    25% { background-color: #d17844; }
+    50% { background-color: rgb(45, 45, 45); }
+    75% { background-color: #43b87f; }
+    100% { background-color: rgb(45, 45, 45); }
 }
 
 p, li
@@ -17,10 +28,20 @@ p, li
     letter-spacing: 0.1em;
 }
 
+#h1title
+{
+    background: -moz-linear-gradient(-45deg, rgba(235, 235, 235, 0.5), transparent);
+    background: -webkit-linear-gradient(-45deg, rgba(235, 235, 235, 0.5), transparent);
+    background: linear-gradient(135deg, rgba(235, 235, 235, 0.5), transparent);
+    border-left: 7px white solid;
+}
+
 h1
 {
     font-size: 3.2rem;
+    padding: 2% 5%;
     color: white;
+    text-shadow: 2px 2px 2px rgba(85, 85, 85, 0.75);
     word-wrap: break-word;
 }
 
@@ -32,55 +53,6 @@ h2
 h3
 {
     font-size: 2.4rem;
-}
-
-/*
-    ####################
-    #  Tab propiertes  #
-    ####################
-*/
-
-.tab ul
-{
-    margin: 0%;
-}
-
-#tab-content
-{
-    background-color: white;
-    padding: 2%;
-}
-
-#tab-menu
-{
-    background-color: gray;
-    overflow: hidden;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
-#tab-menu li
-{
-    display: block;
-    background-color: white;
-    border: rgb(255, 255, 255) 1px solid;
-    font-weight: bold;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    float: left;
-}
-
-#tab-menu a
-{
-    display: block;
-    padding: 10px;
-}
-
-.page
-{
-    margin: 2% 5%;
-    padding: 2%;
 }
 
 a
@@ -99,33 +71,93 @@ img
     border-radius: 10%;
 }
 
+/*
+    ####################
+    #  Tab propiertes  #
+    ####################
+*/
+
+.tab
+{
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tab ul
+{
+    margin: 0%;
+}
+
+#tab-content
+{
+    background-color: #D7E6EF;
+    padding: 2%;
+}
+
+#tab-menu
+{
+    box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.5) inset;
+    background-color: #6E777C;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#tab-menu li
+{
+    display: block;
+    box-shadow: -1px -3px 5px -2px rgba(0, 0, 0, 0.5) inset;
+    background-color: white;
+    font-weight: bold;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    float: left;
+}
+
+#tab-menu li:hover
+{
+    background-color: rgb(200, 200, 200);
+}
+
+#tab-menu a
+{
+    display: block;
+    padding: 10px;
+}
+
+.page
+{
+    margin: 2% 5%;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.5);
+}
+
 #bio
 {
-    display: flex;
-    align-items: flex-start;
     justify-content: space-around;
+    overflow: hidden;
+}
+
+#bio img
+{
+    width: 20%;
+    min-width: 82px;
+    float: left;
 }
 
 #bio p
 {
     margin: 0% 2.5%;
     padding: 0% 2.5%;
-    max-width: 79%;
-    width: 75%;
+    max-width: 69%;
     border-left: 2px rgb(51, 51, 51) dotted;
-}
-
-#bio img
-{
-    margin-top: 1.25%;
-    width: 20%;
-    min-width: 82px;
+    float: left;
 }
 
 #links .link-content
 {
-    display: flex;
-    align-items: flex-start;
+    overflow: hidden;
 }
 
 #links p
@@ -133,6 +165,7 @@ img
     margin: 5% 0%;
     width: 80%;
     vertical-align: middle;
+    float: left;
 }
 
 #links a
@@ -141,6 +174,7 @@ img
     display: block;
     width: 10%;
     min-width: 64px;
+    float: left;
 }
 
 #links img

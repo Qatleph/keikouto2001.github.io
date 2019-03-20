@@ -4,8 +4,7 @@
         <meta charset="UTF-8">
         <meta name="decription" content="keikouto2001&#39;s Homepage.準備中 / Coming soon.">
         <meta name="robots" content="noindex,follow">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <link rel="stylesheet" href="src/stylesheet/style.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300|Titillium+Web" rel="stylesheet">
     </head>
@@ -13,20 +12,16 @@
         <div id="h1title"><h1>keikouto2001's Homepage</h1></div>
 
         <div class="tab">
-            <ul id="tab-menu">
-                <li>
-                    <a href="#bio">Bio</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#hobbies">Hobbies</a>
-                </li>
-                <li>
-                    <a href="#links">Links</a>
-                </li>
-            </ul>
+            <input id="tab-bio" type="radio" name="tab-button" checked>
+            <input id="tab-skills" type="radio" name="tab-button">
+            <input id="tab-hobbies" type="radio" name="tab-button">
+            <input id="tab-links" type="radio" name="tab-button">
+            <div id="tab-area">
+                <label id="t-bio-label" for="tab-bio">Bio</label>
+                <label id="t-skills-label" for="tab-skills">Skills</label>
+                <label id="t-hobbies-label" for="tab-hobbies">Hobbies</label>
+                <label id="t-links-label" for="tab-links">Links</label>
+            </div>
 
             <div id="tab-content">
                 <div id="bio" class="page">
@@ -136,27 +131,3 @@
         </div>
     </body>
 </html>
-<!--
-    書くものメモ
-    -プロフィール
-        *やってることリスト(プログラミング、イラスト、Blender、その他趣味)
-        *趣味(動画鑑賞(Youtube)、ラノベ読書、アニメ鑑賞、ゲーム、競プロ)
-    -各項目の詳細
-        *勉強中のプログラミング言語
-            +メイン(C++)
-            +サブ(C#、HTML、CSS、Javascript)
-            +勉強予定(Python、Go、PHP)
-            +備考(C++で基礎中の基礎はまあまあ扱えるが、全体的にレベルが低いので要勉強予定。)
-        *イラスト
-            +使用してるイラスト投稿サイト(Pixiv)
-            +備考(ちょっとは練習してるので、人並みではある。基本的にだらけたいので厚塗り。)
-        *Blender(3DCG)
-            +基本的に人形のモデルをフルスクラッチで造ってる(まだ一体)。VR用に制作しているが、まだVR機器を入手できていないのでまだ未公開。
-            +一番力入れて勉強していきたい。
-        *ゲーム関連
-            +所持ゲーム(*Steam参照)
-            +基本的にアクションFPS/TPSが好き。そのうちVRに手を出したい。
-        *競プロ
-            +登録してるサイト(AtCoder)
-            +アルゴリズムと数学をまともに勉強できてなかったので、その練習用に邁進中。
--->

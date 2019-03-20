@@ -20,8 +20,13 @@ body
     75% { background-color: #43b87f; }
     100% { background-color: rgb(45, 45, 45); }
 }
+@keyframes switch-anime
+{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
-p, li
+p, li, label
 {
     font-size: 2.0rem;
     line-height: 1.5;
@@ -44,31 +49,22 @@ h1
     text-shadow: 2px 2px 2px rgba(85, 85, 85, 0.75);
     word-wrap: break-word;
 }
-
 h2
 {
     font-size: 2.6rem;
 }
-
 h3
 {
     font-size: 2.4rem;
 }
-
 a
 {
     text-decoration: none;
     color: black;
 }
-
 a:visited
 {
     color: black;
-}
-
-img
-{
-    border-radius: 10%;
 }
 
 /*
@@ -81,48 +77,39 @@ img
 {
     box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.25);
 }
-
-.tab ul
+input[type="radio"]
 {
-    margin: 0%;
+    display: none;
 }
 
-#tab-content
+#tab-area
 {
-    background-color: #D7E6EF;
-    padding: 2%;
-}
-
-#tab-menu
-{
+    padding: 0% 2%;
     box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.5) inset;
     background-color: #6E777C;
+    border-bottom: 5px #D7E6EF solid;
     overflow: hidden;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
-
-#tab-menu li
+#tab-area label
 {
+    padding: 1%;
     display: block;
     box-shadow: -1px -3px 5px -2px rgba(0, 0, 0, 0.5) inset;
     background-color: white;
     font-weight: bold;
+    text-align: center;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     float: left;
+    cursor: pointer;
+    transition: ease 0.2s;
 }
-
-#tab-menu li:hover
+#tab-area label:hover
 {
     background-color: rgb(200, 200, 200);
-}
-
-#tab-menu a
-{
-    display: block;
-    padding: 10px;
 }
 
 .page
@@ -131,27 +118,85 @@ img
     padding: 2%;
     background-color: white;
     box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.5);
+    opacity: 0;
+    display: none;
 }
+
+#tab-bio:checked ~ #tab-content #bio
+{
+    display: block;
+    animation: switch-anime ease 0.5s forwards;
+}
+#tab-bio:checked ~ #tab-area #t-bio-label
+{
+    background-color: #D7E6EF;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 5px 1px gray;
+}
+#tab-skills:checked ~ #tab-content #skills
+{
+    display: block;
+    animation: switch-anime ease 0.5s forwards;
+}
+#tab-skills:checked ~ #tab-area #t-skills-label
+{
+    background-color: #D7E6EF;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 5px 1px gray;
+}
+#tab-hobbies:checked ~ #tab-content #hobbies
+{
+    display: block;
+    animation: switch-anime ease 0.5s forwards;
+}
+#tab-hobbies:checked ~ #tab-area #t-hobbies-label
+{
+    background-color: #D7E6EF;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 5px 1px gray;
+}
+#tab-links:checked ~ #tab-content #links
+{
+    display: block;
+    animation: switch-anime ease 0.5s forwards;
+}
+#tab-links:checked ~ #tab-area #t-links-label
+{
+    background-color: #D7E6EF;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 5px 1px gray;
+}
+
+#tab-content
+{
+    background-color: #D7E6EF;
+    padding: 2%;
+}
+
+/*
+    #################
+    # Tab contents  #
+    #################
+*/
 
 #bio
 {
     justify-content: space-around;
     overflow: hidden;
 }
-
 #bio img
 {
     width: 20%;
     min-width: 82px;
+    border-radius: 10%;
     float: left;
 }
-
 #bio p
 {
     margin: 0% 2.5%;
     padding: 0% 2.5%;
     max-width: 69%;
-    border-left: 2px rgb(51, 51, 51) dotted;
+    border-left: 2px rgb(50, 50, 50) dotted;
     float: left;
 }
 
@@ -159,24 +204,27 @@ img
 {
     overflow: hidden;
 }
-
+#links h3
+{
+    margin: 2% 0% 0% 0%;
+}
 #links p
 {
-    margin: 5% 0%;
-    width: 80%;
+    margin: 2.5% 0%;
+    padding: 2.5% 3%;
+    width: 70%;
+    border-left: 2px rgb(50, 50, 50) dotted;
     vertical-align: middle;
     float: left;
 }
-
 #links a
 {
-    margin: 5% 5% 5% 2%;
+    margin: 2% 7% 2% 2%;
     display: block;
     width: 10%;
     min-width: 64px;
     float: left;
 }
-
 #links img
 {
     width: 100%;

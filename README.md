@@ -1,3 +1,3 @@
 # keikouto2001's Homepage
 
-Coming soon!
+My biography, skills and hobbies.
